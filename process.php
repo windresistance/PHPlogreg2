@@ -1,25 +1,6 @@
 <?php
 	session_start();
-	
-	//define constants for db_host, db_user, db_pass, and db_database
-	define('DB_HOST', 'localhost');
-	define('DB_USER', 'root');
-	define('DB_PASS', '');
-	define('DB_DATABASE', 'logpage');
-	define('DB_USER_TABLE', 'users');
-	
-	define('LOGIN_PG', 'index.php');
-	define('SUCCESS_PG', 'success.php');
-	
-		/* DEFAULT DATABASE FIELDS:
-			id
-			first_name
-			last_name
-			email
-			password
-			created_at
-			updated_at
-		*/
+	require_once './conf.php';
 	
 	if (isset($_POST['action'])) {
 		// log user in
